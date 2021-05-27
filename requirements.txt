@@ -1,0 +1,8 @@
+Flask
+pillow
+matplotlib
+numpy
+pandas
+opencv-python
+gunicorn
+tensorflow-cpu

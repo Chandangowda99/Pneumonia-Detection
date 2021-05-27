@@ -13,14 +13,15 @@ app = Flask(__name__)
 IMG_SIZE = 50
 model = tf.keras.models.load_model("model.h5")
 labels = ["NORMAL", "PNEUMONIA"]
-app.config['UPLOAD_FOLDER'] = 'C:/Users/chand/Desktop/major project/Pneumonia Detection (Accuracy = 97%)/static/uploads/'
+UPLOAD_FOLDER = os.path.join('static/uploads')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def prepare(filepath):
     img_array = cv2.imread(filepath, cv2.IMREAD_GRAYSCALE)
     new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
     return new_array.reshape(-1, IMG_SIZE, IMG_SIZE, 1)
 
-@app.route('/upload')
+@app.route('/')
 def index():
     return render_template('index.html')
 
@@ -30,11 +31,7 @@ def getimage():
         file = request.files['file']
         file.save(os.path.join(app.config['UPLOAD_FOLDER'],secure_filename(file.filename)))
         filename = secure_filename(file.filename)
-        filepath=""
-        for root, dirs, files in os.walk(r"\Users\chand\Desktop\major project\17810_23812_bundle_archive"):
-            for name in files:
-                if name == filename:
-                    filepath=os.path.abspath(os.path.join(root,filename))
+        filepath=os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         prediction = model.predict([prepare(filepath)])
         output = labels[int(prediction[0])]
         return render_template('index.html',filen="uploads/"+filename,prediction=output)
