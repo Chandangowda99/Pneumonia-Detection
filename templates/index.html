@@ -47,13 +47,19 @@ body{
       <form action = "http://localhost:5000/uploader" method = "POST" enctype = "multipart/form-data">
         <center><h1> Pnemonia Detection Using Chest X-Ray Images </h1></center>
         <center><p> Upload X-Ray Image</p></center>
-        <div class="center">
+        <div>
+        <center>
+        <br></br>
          <input type = "file" name = "file" />
          <input type = "submit" value="Predict"/>
          <br><br>
+         {% if filen %}
+         <br></br><br></br>
          <img src="{{url_for('static',filename = filen)}}" alt="Pneumonia X-Ray Image" width="455" height="265"/>
+         {% endif %}
          <br><br>
          <h3>{{prediction}}</h3>
+         </center>
         </div>
       </form>
    </body>
