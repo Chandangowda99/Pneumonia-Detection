@@ -9,13 +9,13 @@
 
 <br />
 
-### → Pneumonia is an infection in the lungs. It is provoked by the agents such as Bacteria, viruses, and fungi. 
+### →  Pneumonia is an infection in the lungs. It is provoked by the agents such as Bacteria, viruses, and fungi. 
 
-###→ The infection causes inflammation in the air sacs of lungs, called alveoli . The alveoli are filled with fluid or pus, which makes the person feel difficulty in breathing. 
+### →  The infection causes inflammation in the air sacs of lungs, called alveoli . The alveoli are filled with fluid or pus, which makes the person feel difficulty in breathing. 
 
-###→ Detection and treatment of pneumonia can reduce mortality rates. Pneumonia is a life threatening and dangerous disease which affects over millions of human beings. 
+### →  Detection and treatment of pneumonia can reduce mortality rates. Pneumonia is a life threatening and dangerous disease which affects over millions of human beings. 
 
-###→ Accurate and fat diagnosis of pneumonia is must to save human life. Deep learning algorithms based on Convolutional neural network have become the common choice for image classifications. 
+### →  Accurate and fat diagnosis of pneumonia is must to save human life. Deep learning algorithms based on Convolutional neural network have become the common choice for image classifications. 
 
 ## This image clearly explains how X-Ray image is processed in CNN Model
 ![image](https://user-images.githubusercontent.com/42439091/122641160-10bed580-d121-11eb-80fb-4b41a8faf210.png)
