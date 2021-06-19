@@ -23,3 +23,5 @@
 ## This is how my Website looks like which have upload and predict button where upload button accepts X-Ray Image and predict button gives its output whether it is Pneumonia or Normal
 
 ![image](https://user-images.githubusercontent.com/42439091/122641167-1f0cf180-d121-11eb-9b38-cf98de0dbe99.png)
+
+#### Website link: https://x-ray-detect.herokuapp.com
